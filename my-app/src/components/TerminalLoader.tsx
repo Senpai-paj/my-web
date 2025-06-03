@@ -132,7 +132,7 @@ export default function TerminalLoader({ show }: TerminalLoaderProps) {
         )}
       </div>
       <button 
-        onClick={() => setIsVisible(false)}
+        onClick={() => {setIsVisible(false); show()}}
         className="absolute bottom-4 right-4 
                   text-green-500 hover:text-green-400 
                   font-mono text-sm hover:cursor-pointer"
