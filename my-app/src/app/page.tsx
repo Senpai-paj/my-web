@@ -1,12 +1,12 @@
 import Image from "next/image";
 import TerminalLoader from "@/components/TerminalLoader";
-import Hero from "@/components/Hero";
+import Hero from "@/components/Hero/Hero";
 
 export default function Home() {
   return (
     <>
       <TerminalLoader />
-      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+      <main className="bg-black text-green-500">
         {/* Hero Section */}
         <Hero/>
 
