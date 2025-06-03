@@ -1,4 +1,3 @@
-import Image from "next/image";
 import TerminalLoader from "@/components/TerminalLoader";
 import Hero from "@/components/Hero/Hero";
 
@@ -15,7 +14,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">About Me</h2>
             <p className="text-gray-600 leading-relaxed">
-              I'm a passionate developer with expertise in building modern web applications.
+              Im a passionate developer with expertise in building modern web applications.
               I love creating elegant solutions to complex problems and am constantly
               learning new technologies to improve my craft.
             </p>
