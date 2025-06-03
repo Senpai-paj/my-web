@@ -2,6 +2,7 @@
 
 import TerminalLoader from "@/components/TerminalLoader";
 import Hero from "@/components/Hero/Hero";
+import CursorHighlight from "@/components/CursorHighlight";
 import { useState } from 'react';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
   
   return (
     <>
+      <CursorHighlight />
       <TerminalLoader show={showPage}/>
       <main className={`bg-black text-green-500 transition-opacity duration-1000 ${show ? 'opacity-100' : 'opacity-0'}`}>
         {/* Hero Section */}
