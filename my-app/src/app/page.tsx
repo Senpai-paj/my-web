@@ -9,15 +9,6 @@ export default function Home() {
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-20">
           <div className="flex flex-col items-center text-center">
-            <div className="relative w-32 h-32 mb-8 rounded-full overflow-hidden">
-              <Image
-                src="/profile-placeholder.jpg"
-                alt="Profile picture"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
             <h1 className="text-4xl font-bold text-gray-800 mb-4">Your Name</h1>
             <p className="text-xl text-gray-600 mb-8">Full Stack Developer</p>
             <div className="flex gap-4">
