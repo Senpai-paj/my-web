@@ -126,6 +126,14 @@ const TerminalLoader = () => {
           </div>
         )}
       </div>
+      <button 
+        onClick={() => setIsVisible(false)}
+        className="absolute bottom-4 right-4 
+                  text-green-500 hover:text-green-400 
+                  font-mono text-sm hover:cursor-pointer"
+      >
+        Skip Intro
+      </button>
     </div>
   );
 };
