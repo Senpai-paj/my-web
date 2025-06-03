@@ -4,11 +4,32 @@ import { useState, useEffect } from 'react';
 
 const titles = [
   "Full Stack Developer",
-  "Problem Solver",
-  "Tech Enthusiast",
-  "UI/UX Designer",
-  "Code Artist"
+  "Code Whisperer",
+  "Bug Slayer",
+  "Pixel Perfectionist",
+  "Database Tamer",
+  "API Alchemist",
+  "UI/UX Magician",
+  "Semantic Sorcerer",
+  "Java Jedi",
+  "React Ranger",
+  "Debugger Extraordinaire",
+  "Component Conjurer",
+  "Logical Thinker",
+  "Tech Explorer",
+  "System Architect Apprentice",
+  "Frontend Fanatic",
+  "Back-End Beast",
+  "Terminal Commander",
+  "Dark Mode Advocate",
+  "Ctrl+S Maniac",
+  "Clean Code Evangelist",
+  "Coffee-to-Code Converter",
+  "Deployment Whisperer",
+  "Console.Log Philosopher",
+  "Night Owl Coder"
 ];
+
 
 const Titles = () => {
   const [text, setText] = useState('');

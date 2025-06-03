@@ -2,6 +2,7 @@
 
 import TerminalLoader from "@/components/TerminalLoader";
 import Hero from "@/components/Hero/Hero";
+import About from "@/components/About/About";
 import CursorHighlight from "@/components/CursorHighlight";
 import { useState } from 'react';
 
@@ -17,24 +18,19 @@ export default function Home() {
     <>
       <CursorHighlight />
       <TerminalLoader show={showPage}/>
-      <main className={`bg-black text-green-500 transition-opacity duration-1000 ${show ? 'opacity-100' : 'opacity-0'}`}>
+      <main className={`bg-black text-green-500 transition-opacity duration-1000 ${show ? 'opacity-100' : 'opacity-0'} h-screen overflow-y-scroll snap-y snap-mandatory`}>
         {/* Hero Section */}
-        <Hero />
+        <div className="snap-start">
+          <Hero />
+        </div>
 
         {/* About Section */}
-        <section className="container mx-auto px-4 py-16 bg-white">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">About Me</h2>
-            <p className="text-gray-600 leading-relaxed">
-              Im a passionate developer with expertise in building modern web applications.
-              I love creating elegant solutions to complex problems and am constantly
-              learning new technologies to improve my craft.
-            </p>
-          </div>
-        </section>
+        <div className="snap-start">
+          <About />
+        </div>
 
         {/* Skills Section */}
-        <section className="container mx-auto px-4 py-16">
+        <section className="container mx-auto px-4 py-16 snap-start min-h-screen flex items-center justify-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-800 mb-8">Skills</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
