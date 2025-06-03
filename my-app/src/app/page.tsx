@@ -1,13 +1,23 @@
+'use client';
+
 import TerminalLoader from "@/components/TerminalLoader";
 import Hero from "@/components/Hero/Hero";
+import { useState } from 'react';
 
 export default function Home() {
+
+  const [show,setShow] = useState(false)
+
+  const showPage =()=>{
+    setShow(true);
+  }
+  
   return (
     <>
-      <TerminalLoader />
-      <main className="bg-black text-green-500">
+      <TerminalLoader show={showPage}/>
+      <main className={`bg-black text-green-500 transition-opacity duration-1000 ${show ? 'opacity-100' : 'opacity-0'}`}>
         {/* Hero Section */}
-        <Hero/>
+        <Hero />
 
         {/* About Section */}
         <section className="container mx-auto px-4 py-16 bg-white">
@@ -41,3 +51,4 @@ export default function Home() {
     </>
   );
 }
+

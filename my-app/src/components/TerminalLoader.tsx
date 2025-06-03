@@ -2,7 +2,11 @@
 
 import { useState, useEffect } from 'react';
 
-const TerminalLoader = () => {
+interface TerminalLoaderProps {
+  show: () => void;
+}
+
+export default function TerminalLoader({ show }: TerminalLoaderProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [text, setText] = useState('');
   const [dots, setDots] = useState('');
@@ -51,6 +55,7 @@ const TerminalLoader = () => {
       setTimeout(() => {
         clearInterval(dotsInterval);
         setIsVisible(false);
+        show()
       }, 5000);
       return;
     }
@@ -138,4 +143,4 @@ const TerminalLoader = () => {
   );
 };
 
-export default TerminalLoader; 
+ 
