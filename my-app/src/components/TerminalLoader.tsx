@@ -100,7 +100,7 @@ const TerminalLoader = () => {
 
   return (
     <div className="fixed inset-0 bg-black z-50 flex flex-col p-4">
-      <div className="font-mono text-green-500 text-xl">
+      <div className="font-mono text-green-500 text-md">
         {steps.filter((_, index) => visibleSteps.includes(index)).map((step, index) => (
           <div key={index}>
             <div className="whitespace-pre">
@@ -116,13 +116,13 @@ const TerminalLoader = () => {
         {currentStep < steps.length && !showOutput && (
           <div className="whitespace-pre">
             {showPrompt && steps[currentStep].prompt}<span>{text}</span>
-            <span className="animate-blink">|</span>
+            <span className="inline-block w-[10px] h-5 bg-green-500 animate-pulse ml-0.5"></span>
           </div>
         )}
         {currentStep >= steps.length && (
           <div className="whitespace-pre">
             {text}{dots}
-            <span className="animate-blink">|</span>
+            {/*<span className="inline-block w-[10px] h-5 bg-green-500 animate-pulse ml-0.5"></span>*/}
           </div>
         )}
       </div>
