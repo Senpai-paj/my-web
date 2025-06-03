@@ -57,7 +57,7 @@ export default function TerminalLoader({ show }: TerminalLoaderProps) {
         setIsVisible(false);
         show()
       }, 5000);
-      return;
+      return () => clearInterval(dotsInterval);
     }
 
     // First show the prompt
@@ -99,7 +99,7 @@ export default function TerminalLoader({ show }: TerminalLoaderProps) {
     }, 500);
 
     return () => clearTimeout(typingTimeout);
-  }, [currentStep]);
+  }, [currentStep, show, steps]);
 
   if (!isVisible) return null;
 
