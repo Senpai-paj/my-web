@@ -104,7 +104,7 @@ export default function TerminalLoader({ show }: TerminalLoaderProps) {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 bg-black z-50 flex flex-col p-4">
+    <div className="fixed inset-0 z-50 flex flex-col p-4">
       <div className="font-mono text-green-500 text-md">
         {steps.filter((_, index) => visibleSteps.includes(index)).map((step, index) => (
           <div key={index}>

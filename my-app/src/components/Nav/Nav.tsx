@@ -1,17 +1,34 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import ThemeToggle from '../ThemeToggle';
 
 const Nav = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isLightTheme, setIsLightTheme] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsVisible(window.scrollY > 100);
     };
 
+    const checkTheme = () => {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      setIsLightTheme(isLight);
+    };
+
+    // Initial theme check
+    checkTheme();
+
+    // Create observer to watch for theme changes
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, { attributes: true });
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
@@ -22,7 +39,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-black">
+    <nav className={`transition ${isLightTheme ? 'hover:bg-green-500/10' : 'hover:bg-black/30'}`}>
       <div className="container mx-auto">
         <div className="flex justify-end items-center p-6">
           <div className="flex items-center space-x-8">
@@ -69,6 +86,9 @@ const Nav = () => {
               <span className="relative z-10">skills</span>
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-500 group-hover:w-full transition-all duration-300"></span>
             </button>
+            <div className="w-8 h-[2px] bg-green-500"></div>
+            
+            <ThemeToggle />
           </div>
         </div>
       </div>

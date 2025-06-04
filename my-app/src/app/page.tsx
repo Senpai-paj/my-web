@@ -5,8 +5,8 @@ import Hero from "@/components/Hero/Hero";
 import About from "@/components/About/About";
 import Nav from "@/components/Nav/Nav"
 import SideNav from "@/components/SideNav/SideNav";
-import CursorHighlight from "@/components/CursorHighlight";
 import { useState } from 'react';
+import SymbolBackground from "@/components/Hero/SymbolBackground";
 
 export default function Home() {
   const [show,setShow] = useState(false)
@@ -17,11 +17,11 @@ export default function Home() {
   
   return (
     <>
-      <CursorHighlight />
       <TerminalLoader show={showPage}/>
-      <div className={`relative transition-opacity duration-1000 ${show ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`h-screen relative transition-opacity duration-1000 ${show ? 'opacity-100' : 'opacity-0'}`}>
         <SideNav />
-        <main className="bg-black text-green-500 h-screen overflow-y-auto snap-y snap-mandatory">
+        <main className=" h-full overflow-y-auto snap-y snap-mandatory">
+          {show && <SymbolBackground/>}
           {/* Hero Section */}
           <section id="hero" className="h-screen snap-start flex flex-col">
             <Nav />
@@ -34,6 +34,7 @@ export default function Home() {
           <About />
 
           {/* Skills Section */}
+          
           <section id="skills" className="h-screen snap-start flex items-center justify-center">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
@@ -42,7 +43,7 @@ export default function Home() {
                   {['React', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'AWS'].map((skill) => (
                     <div
                       key={skill}
-                      className="bg-black border border-green-500 p-4 rounded-lg hover:bg-green-500/10 transition"
+                      className="border border-green-500 p-4 rounded-lg hover:bg-green-500/10 transition"
                     >
                       <p className="text-green-500 font-medium">{skill}</p>
                     </div>

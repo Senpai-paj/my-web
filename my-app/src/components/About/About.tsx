@@ -9,7 +9,7 @@ export default function About() {
     const educationRef = useScrollFade();
 
     return (
-        <div className="container mx-auto px-4 bg-black">
+        <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
                 {/* About Section */}
                 <section id="about-me" className="min-h-screen flex items-center justify-center snap-start">
