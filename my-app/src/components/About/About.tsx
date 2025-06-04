@@ -9,10 +9,10 @@ export default function About() {
     const educationRef = useScrollFade();
 
     return (
-        <section className="container mx-auto px-4 bg-black">
+        <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
                 {/* About Section */}
-                <div className="min-h-screen flex items-center justify-center snap-start">
+                <section id="about-me" className="min-h-screen flex items-center justify-center snap-start">
                     <div className="space-y-6 w-full">
                         <AnimatedBorder />
                         <div 
@@ -37,11 +37,10 @@ export default function About() {
                         </div>
                         <AnimatedBorder />
                     </div>
-
-                </div>
+                </section>
 
                 {/* Experience Section */}
-                <div className="min-h-screen flex items-center justify-center snap-start">
+                <section id="experience" className="min-h-screen flex items-center justify-center snap-start">
                     <div className="space-y-6 w-full">
                         <AnimatedBorder />
                         <div 
@@ -72,11 +71,10 @@ export default function About() {
                         </div>
                         <AnimatedBorder />
                     </div>
-                </div>
+                </section>
                 
-
                 {/* Education Section */}
-                <div className="min-h-screen flex items-center justify-center snap-start">
+                <section id="education" className="min-h-screen flex items-center justify-center snap-start">
                     <div className="space-y-6 w-full">
                         <AnimatedBorder />
                         <div 
@@ -99,8 +97,8 @@ export default function About() {
                         </div>
                         <AnimatedBorder />
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
+        </div>
     );
 }

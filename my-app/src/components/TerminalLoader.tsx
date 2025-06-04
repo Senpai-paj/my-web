@@ -104,7 +104,7 @@ export default function TerminalLoader({ show }: TerminalLoaderProps) {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 bg-black z-50 flex flex-col p-4">
+    <div className="fixed inset-0 z-50 flex flex-col p-4">
       <div className="font-mono text-green-500 text-md">
         {steps.filter((_, index) => visibleSteps.includes(index)).map((step, index) => (
           <div key={index}>
@@ -135,7 +135,7 @@ export default function TerminalLoader({ show }: TerminalLoaderProps) {
         onClick={() => {setIsVisible(false); show()}}
         className="absolute bottom-4 right-4 
                   text-green-500 hover:text-green-400 
-                  font-mono text-sm cursor-none"
+                  font-mono text-sm hover:cursor-pointer"
       >
         Skip Intro
       </button>
