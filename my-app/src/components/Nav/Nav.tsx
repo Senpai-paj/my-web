@@ -1,35 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ThemeToggle from '../ThemeToggle';
 
 const Nav = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [isLightTheme, setIsLightTheme] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsVisible(window.scrollY > 100);
-    };
-
-    const checkTheme = () => {
-      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-      setIsLightTheme(isLight);
-    };
-
-    // Initial theme check
-    checkTheme();
-
-    // Create observer to watch for theme changes
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.documentElement, { attributes: true });
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      observer.disconnect();
-    };
-  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -88,7 +63,7 @@ const Nav = () => {
             </button>
             <div className="w-8 h-[2px] bg-green-500"></div>
             
-            <ThemeToggle />
+            <ThemeToggle isLightTheme={isLightTheme} onThemeChange={setIsLightTheme}/>
           </div>
         </div>
       </div>

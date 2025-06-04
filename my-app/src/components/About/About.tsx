@@ -24,7 +24,7 @@ export default function About() {
                             <div className="space-y-6">
                                 <h2 className="text-4xl font-bold text-green-500">About Me</h2>
                                 <p className="text-gray-400 leading-relaxed text-lg">
-                                    I'm a passionate Full Stack Developer with a keen eye for creating elegant solutions 
+                                    I`&apos`m a passionate Full Stack Developer with a keen eye for creating elegant solutions 
                                     in the least amount of time. I specialize in building modern systems 
                                     using cutting-edge technologies.
                                 </p>
