@@ -6,12 +6,12 @@ export default function Hero() {
           <div className="flex flex-col items-start text-center">
             <h1 className="text-6xl font-bold mb-4">Victor Pirojoc</h1>
             <Titles/>
-            <div className="flex gap-4 my-5">
+            <div className="flex gap-4 m-5">
               <a
                 href="https://github.com/Senpai-paj"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-2 cursor-none rounded-lg border border-green-500 hover:bg-green-500 hover:text-black transition"
+                className="px-6 py-2 rounded-lg border border-green-500 hover:bg-green-500 hover:text-black transition"
               >
                 GitHub
               </a>
@@ -19,7 +19,7 @@ export default function Hero() {
                 href="https://www.linkedin.com/in/victor-pirojoc/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-2 rounded-lg cursor-none border border-green-500 hover:bg-green-500 hover:text-black transition"
+                className="px-6 py-2 rounded-lg border border-green-500 hover:bg-green-500 hover:text-black transition"
 
               >
                 LinkedIn
