@@ -14,7 +14,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className={`transition ${isLightTheme ? 'hover:bg-teal-700/10' : 'hover:bg-black/30'}`}>
+    <nav className={``}>
       <div className="container mx-auto">
         <div className="flex justify-end items-center p-6">
           <div className="flex items-center space-x-8  font-mono text-xl transition-colors">
