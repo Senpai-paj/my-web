@@ -4,7 +4,7 @@ import TerminalLoader from "@/components/TerminalLoader";
 import Hero from "@/components/Hero/Hero";
 import About from "@/components/About/About";
 import Nav from "@/components/Nav/Nav"
-import SideNav from "@/components/SideNav/SideNav";
+import SideNav from "@/components/Nav/SideNav";
 import { useState } from 'react';
 import SymbolBackground from "@/components/SymbolBackground";
 

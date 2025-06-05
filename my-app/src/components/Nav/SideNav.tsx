@@ -8,13 +8,16 @@ const SideNav = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['hero', 'about-me', 'experience', 'education', 'skills'];
-      const viewportMiddle = window.innerHeight / 2;
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
       
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= viewportMiddle && rect.bottom >= viewportMiddle) {
+          const elementTop = rect.top + window.scrollY;
+          const elementBottom = elementTop + rect.height;
+          
+          if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
             setActiveSection(section);
             break;
           }
@@ -22,9 +25,15 @@ const SideNav = () => {
       }
     };
 
+    // Use both scroll and wheel events to catch all scroll interactions
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('wheel', handleScroll);
     handleScroll(); // Check initial position
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('wheel', handleScroll);
+    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
@@ -43,8 +52,8 @@ const SideNav = () => {
           onClick={() => scrollToSection(section)}
           className={`w-3 h-3 rounded-full transition-all duration-300 ${
             activeSection === section
-              ? 'bg-green-500 scale-125'
-              : 'border-2 border-green-500 hover:scale-110'
+              ? 'bg-foreground scale-125'
+              : 'border-2 border-foreground hover:scale-110'
           }`}
           aria-label={`Scroll to ${section}`}
         />
