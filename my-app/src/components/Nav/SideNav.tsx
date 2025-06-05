@@ -45,7 +45,7 @@ const SideNav = () => {
   };
 
   return (
-    <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col items-center space-y-4">
+    <div className="hidden md:flex fixed right-8 top-1/2 -translate-y-1/2 flex-col items-center space-y-4">
       {['hero', 'about-me', 'experience', 'education', 'skills'].map((section) => (
         <button
           key={section}

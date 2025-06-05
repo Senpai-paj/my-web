@@ -19,7 +19,7 @@ const Skills = () => {
               }`}
             >
               <div className="space-y-8">
-                <h2 className="text-4xl font-bold">Skills</h2>
+                <h2 className="text-4xl font-bold text-center md:text-left">Skills</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {['Java','TypeScript','SpringBoot','React','C#','.NET', 'Node.js', 'Python', 'CSS & HTML','AWS'].map((skill) => (
                     <div

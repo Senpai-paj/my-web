@@ -49,8 +49,8 @@ export default function AnimatedBorder() {
     }, []);
 
     return (
-        <div className="w-full overflow-hidden">
-            <div className="text-xl font-thin whitespace-nowrap tracking-wider">{/* font-mono */}
+        <div className="w-full overflow-hidden flex justify-center">
+            <div className="text-xl font-thin whitespace-nowrap tracking-wider text-center">
                 {borderSymbols.join('')}
             </div>
         </div>

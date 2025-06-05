@@ -22,13 +22,13 @@ export default function About() {
                             }`}
                         >
                             <div className="space-y-6">
-                                <h2 className="text-4xl font-bold">About Me</h2>
-                                <p className="text-gray-400 leading-relaxed text-lg">
+                                <h2 className="text-4xl font-bold text-center md:text-left">About Me</h2>
+                                <p className="text-gray-400 leading-relaxed text-lg text-justify">
                                     I&apos;m a passionate Full Stack Developer with a keen eye for creating elegant solutions 
                                     in the least amount of time. I specialize in building modern systems 
                                     using cutting-edge technologies.
                                 </p>
-                                <p className="text-gray-400 leading-relaxed text-lg">
+                                <p className="text-gray-400 leading-relaxed text-lg text-justify">
                                     My journey in tech started with a curiosity about how things work in development, 
                                     which evolved into a deep passion for creating seamless user experiences and 
                                     robust backend systems.
@@ -49,12 +49,12 @@ export default function About() {
                                 experienceRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                             }`}
                         >
-                            <h2 className="text-4xl font-bold">Experience</h2>
+                            <h2 className="text-4xl font-bold text-center md:text-left">Experience</h2>
                             <div className="grid gap-6">
                                 <div className="p-6 bg-foreground rounded-lg">
                                     <h3 className="text-2xl text-background">System Developer</h3>
                                     <p className="text-background">Sigma Technology • 2024 - 2025</p>
-                                    <p className="text-background mt-4">
+                                    <p className="text-background mt-4 text-justify">
                                         Developed an advanced reporting system for vehicle sensor analysis. 
                                         Integrated backend logic with UX/UI components for real-time monitoring.
                                     </p>
@@ -62,7 +62,7 @@ export default function About() {
                                 <div className="p-6 bg-foreground rounded-lg">
                                     <h3 className="text-2xl text-background">Full-Stack Developer | Team Lead</h3>
                                     <p className="text-background">SARSYS • 2024 - 2025</p>
-                                    <p className="text-background mt-4">
+                                    <p className="text-background mt-4 text-justify">
                                         Designed and developed a dashboard system improving airport workflows and customer management.
                                         Implemented frontend and backend solutions using TypeScript.
                                     </p>
@@ -83,13 +83,13 @@ export default function About() {
                                 educationRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                             }`}
                         >
-                            <h2 className="text-4xl font-bold">Education</h2>
+                            <h2 className="text-4xl font-bold text-center md:text-left">Education</h2>
                             <div className="grid gap-6">
                                 <div className="p-6 bg-foreground rounded-lg">
                                     <h3 className="text-2xl text-background">Bachelor of Science in Computer Science with specialization in Computer Systems
                                     Development</h3>
                                     <p className="text-background">Malmö University • 2022 - 2025</p>
-                                    <p className="text-background mt-4">
+                                    <p className="text-background mt-4 text-justify">
                                     Focused on modern system development and software engineering. 
                                     Specialized in full-stack development, cloud computing, and agile methodologies. 
                                     Developed practical skills through hands-on projects and industry collaborations. 

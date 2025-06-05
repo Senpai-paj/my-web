@@ -17,27 +17,27 @@ export default function TerminalLoader({ show }: TerminalLoaderProps) {
 
   const steps = [
     {
-      prompt: 'victorpirojoc@Victors-MacBook-Air ~ % ',
+      prompt: '@Victors-MacBook-Air ~ % ',
       command: 'ls',
       output: 'Applications\t\tLibrary\t\t\tPostman Agent\nDesktop\t\t\t\tMovies\t\t\tProgramming\nDocuments\t\t\tMusic\t\t\tPublic\nDownloads\t\t\tPictures'
     },
     {
-      prompt: 'victorpirojoc@Victors-MacBook-Air ~ % ',
+      prompt: '@Victors-MacBook-Air ~ % ',
       command: 'cd Programming/my-web/my-appp',
       output: 'cd: no such file or directory: Programming/my-web/my-appp'
     },
     {
-      prompt: 'victorpirojoc@Victors-MacBook-Air ~ % ',
+      prompt: '@Victors-MacBook-Air ~ % ',
       command: 'cd Programming/my-web/my-app'
     },
     {
-      prompt: 'victorpirojoc@Victors-MacBook-Air my-app % ',
+      prompt: '@Victors-MacBook-Air my-app % ',
       command: 'clear',
       output: null,
       isClear: true
     },
     {
-      prompt: 'victorpirojoc@Victors-MacBook-Air my-app % ',
+      prompt: '@Victors-MacBook-Air my-app % ',
       command: 'npm run dev'
     }
   ];
@@ -104,37 +104,36 @@ export default function TerminalLoader({ show }: TerminalLoaderProps) {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col p-4">
-      <div className="font-mono text-green-500 text-md">
+    <div className="fixed inset-0 z-50 flex flex-col p-2 sm:p-4">
+      <div className="font-mono text-green-500 text-sm sm:text-md overflow-x-auto">
         {steps.filter((_, index) => visibleSteps.includes(index)).map((step, index) => (
           <div key={index}>
-            <div className="whitespace-pre">
+            <div className="whitespace-pre-wrap sm:whitespace-pre">
               {step.prompt}<span>{step.command}</span>
             </div>
             {step.output && (
-              <div className="whitespace-pre mt-2">
+              <div className="whitespace-pre-wrap sm:whitespace-pre mt-2">
                 {step.output}
               </div>
             )}
           </div>
         ))}
         {currentStep < steps.length && !showOutput && (
-          <div className="whitespace-pre">
+          <div className="whitespace-pre-wrap sm:whitespace-pre">
             {showPrompt && steps[currentStep].prompt}<span>{text}</span>
             <span className="inline-block w-[10px] h-5 bg-green-500 animate-pulse ml-0.5"></span>
           </div>
         )}
         {currentStep >= steps.length && (
-          <div className="whitespace-pre">
+          <div className="whitespace-pre-wrap sm:whitespace-pre">
             {text}{dots}
-            {/*<span className="inline-block w-[10px] h-5 bg-green-500 animate-pulse ml-0.5"></span>*/}
           </div>
         )}
       </div>
       <button 
         onClick={() => {setIsVisible(false); show()}}
-        className="absolute bottom-1/2 right-10  
-                   text-2xl hover:cursor-pointer"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:bottom-1/2 sm:right-10  
+                   text-lg sm:text-2xl hover:cursor-pointer"
       >
         Skip Intro
       </button>

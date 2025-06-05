@@ -14,7 +14,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className={``}>
+    <nav className="hidden md:block">
       <div className="container mx-auto">
         <div className="flex justify-end items-center p-6">
           <div className="flex items-center space-x-8  font-mono text-xl transition-colors">
