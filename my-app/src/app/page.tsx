@@ -38,14 +38,14 @@ export default function Home() {
           <section id="skills" className="h-screen snap-start flex items-center justify-center">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
-                <h2 className="text-3xl font-bold text-green-500 mb-8">Skills</h2>
+                <h2 className="text-3xl font-bold mb-8">Skills</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {['React', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'AWS'].map((skill) => (
                     <div
                       key={skill}
-                      className="border border-green-500 p-4 rounded-lg hover:bg-green-500/10 transition"
+                      className="border border-foreground p-4 rounded-lg hover:bg-foreground hover:text-background transition"
                     >
-                      <p className="text-green-500 font-medium">{skill}</p>
+                      <p className="font-medium">{skill}</p>
                     </div>
                   ))}
                 </div>

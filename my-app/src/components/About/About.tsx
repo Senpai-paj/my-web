@@ -52,19 +52,19 @@ export default function About() {
                             <h2 className="text-4xl font-bold">Experience</h2>
                             <div className="grid gap-6">
                                 <div className="p-6 bg-foreground rounded-lg">
-                                    <h3 className="text-2xl text-background">Senior Developer</h3>
-                                    <p className="text-gray-400">Company Name • 2022 - Present</p>
-                                    <p className="text-gray-400 mt-4">
-                                        Leading development of enterprise applications using React and Node.js. 
-                                        Spearheading the implementation of microservices architecture and CI/CD pipelines.
+                                    <h3 className="text-2xl text-background">System Developer</h3>
+                                    <p className="text-background">Sigma Technology • 2024 - 2025</p>
+                                    <p className="text-background mt-4">
+                                        Developed an advanced reporting system for vehicle sensor analysis. 
+                                        Integrated backend logic with UX/UI components for real-time monitoring.
                                     </p>
                                 </div>
                                 <div className="p-6 bg-foreground rounded-lg">
-                                    <h3 className="text-2xl text-background">Full Stack Developer</h3>
-                                    <p className="text-gray-400">Previous Company • 2020 - 2022</p>
-                                    <p className="text-gray-400 mt-4">
-                                        Developed and maintained multiple web applications. Implemented responsive 
-                                        designs and optimized database queries for better performance.
+                                    <h3 className="text-2xl text-background">Full-Stack Developer | Team Lead</h3>
+                                    <p className="text-background">SARSYS • 2024 - 2025</p>
+                                    <p className="text-background mt-4">
+                                        Designed and developed a dashboard system improving airport workflows and customer management.
+                                        Implemented frontend and backend solutions using TypeScript.
                                     </p>
                                 </div>
                             </div>
@@ -86,11 +86,15 @@ export default function About() {
                             <h2 className="text-4xl font-bold">Education</h2>
                             <div className="grid gap-6">
                                 <div className="p-6 bg-foreground rounded-lg">
-                                    <h3 className="text-2xl text-background">Computer Science</h3>
-                                    <p className="text-gray-400">University Name • 2016 - 2020</p>
-                                    <p className="text-gray-400 mt-4">
-                                        Focused on software engineering and web development. Participated in various 
-                                        hackathons and coding competitions. Graduated with honors.
+                                    <h3 className="text-2xl text-background">Bachelor of Science in Computer Science with specialization in Computer Systems
+                                    Development</h3>
+                                    <p className="text-background">Malmö University • 2022 - 2025</p>
+                                    <p className="text-background mt-4">
+                                    Focused on modern system development and software engineering. 
+                                    Specialized in full-stack development, cloud computing, and agile methodologies. 
+                                    Developed practical skills through hands-on projects and industry collaborations. 
+                                    Participated in hackathons and coding competitions, gaining experience in rapid prototyping and team development. 
+                                    Graduated with a strong foundation in both theoretical knowledge and practical implementation.
                                     </p>
                                 </div>
                             </div>
