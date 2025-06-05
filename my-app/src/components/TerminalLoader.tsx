@@ -57,7 +57,7 @@ export default function TerminalLoader({ show }: TerminalLoaderProps) {
         setIsVisible(false);
         show()
       }, 5000);
-      return () => clearInterval(dotsInterval);
+      return;
     }
 
     // First show the prompt
@@ -99,7 +99,7 @@ export default function TerminalLoader({ show }: TerminalLoaderProps) {
     }, 500);
 
     return () => clearTimeout(typingTimeout);
-  }, [currentStep, show, steps]);
+  }, [currentStep]);
 
   if (!isVisible) return null;
 
@@ -133,14 +133,11 @@ export default function TerminalLoader({ show }: TerminalLoaderProps) {
       </div>
       <button 
         onClick={() => {setIsVisible(false); show()}}
-        className="absolute bottom-4 right-4 
-                  text-green-500 hover:text-green-400 
-                  font-mono text-sm hover:cursor-pointer"
+        className="absolute bottom-1/2 right-10  
+                   text-2xl hover:cursor-pointer"
       >
         Skip Intro
       </button>
     </div>
   );
 };
-
- 
