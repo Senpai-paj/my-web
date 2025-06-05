@@ -50,7 +50,7 @@ export default function AnimatedBorder() {
 
     return (
         <div className="w-full overflow-hidden">
-            <div className="text-green-500 text-xl font-mono whitespace-nowrap tracking-wider">
+            <div className="text-xl font-thin whitespace-nowrap tracking-wider">{/* font-mono */}
                 {borderSymbols.join('')}
             </div>
         </div>

@@ -23,45 +23,45 @@ const Nav = () => {
               className="group relative "
             >
               <span className="relative z-10">home</span>
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-foreground group-hover:w-full transition-all duration-300"></span>
             </button>
-            <div className="w-8 h-[2px] bg-green-500"></div>
+            <div className="w-8 h-[2px] bg-foreground"></div>
             
             <button 
               onClick={() => scrollToSection('about-me')}
               className="group relative "
             >
               <span className="relative z-10">about</span>
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-foreground group-hover:w-full transition-all duration-300"></span>
             </button>
-            <div className="w-8 h-[2px] bg-green-500"></div>
+            <div className="w-8 h-[2px] bg-foreground"></div>
 
             <button 
               onClick={() => scrollToSection('experience')}
               className="group relative "
             >
               <span className="relative z-10">experience</span>
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-foreground group-hover:w-full transition-all duration-300"></span>
             </button>
-            <div className="w-8 h-[2px] bg-green-500"></div>
+            <div className="w-8 h-[2px] bg-foreground"></div>
 
             <button 
               onClick={() => scrollToSection('education')}
               className="group relative "
             >
               <span className="relative z-10">education</span>
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-foreground group-hover:w-full transition-all duration-300"></span>
             </button>
-            <div className="w-8 h-[2px] bg-green-500"></div>
+            <div className="w-8 h-[2px] bg-foreground"></div>
 
             <button 
               onClick={() => scrollToSection('skills')}
               className="group relative "
             >
               <span className="relative z-10">skills</span>
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-foreground group-hover:w-full transition-all duration-300"></span>
             </button>
-            <div className="w-8 h-[2px] bg-green-500"></div>
+            <div className="w-8 h-[2px] bg-foreground"></div>
             
             <ThemeToggle isLightTheme={isLightTheme} onThemeChange={setIsLightTheme}/>
           </div>

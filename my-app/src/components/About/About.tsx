@@ -22,7 +22,7 @@ export default function About() {
                             }`}
                         >
                             <div className="space-y-6">
-                                <h2 className="text-4xl font-bold text-green-500">About Me</h2>
+                                <h2 className="text-4xl font-bold">About Me</h2>
                                 <p className="text-gray-400 leading-relaxed text-lg">
                                     I&apos;m a passionate Full Stack Developer with a keen eye for creating elegant solutions 
                                     in the least amount of time. I specialize in building modern systems 
@@ -49,18 +49,18 @@ export default function About() {
                                 experienceRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                             }`}
                         >
-                            <h2 className="text-4xl font-bold text-green-500">Experience</h2>
+                            <h2 className="text-4xl font-bold">Experience</h2>
                             <div className="grid gap-6">
-                                <div className="p-6 bg-green-500/10 rounded-lg hover:bg-green-500/20 transition-colors cursor-none">
-                                    <h3 className="text-2xl text-green-500">Senior Developer</h3>
+                                <div className="p-6 bg-foreground rounded-lg">
+                                    <h3 className="text-2xl text-background">Senior Developer</h3>
                                     <p className="text-gray-400">Company Name • 2022 - Present</p>
                                     <p className="text-gray-400 mt-4">
                                         Leading development of enterprise applications using React and Node.js. 
                                         Spearheading the implementation of microservices architecture and CI/CD pipelines.
                                     </p>
                                 </div>
-                                <div className="p-6 bg-green-500/10 rounded-lg hover:bg-green-500/20 transition-colors cursor-none">
-                                    <h3 className="text-2xl text-green-500">Full Stack Developer</h3>
+                                <div className="p-6 bg-foreground rounded-lg">
+                                    <h3 className="text-2xl text-background">Full Stack Developer</h3>
                                     <p className="text-gray-400">Previous Company • 2020 - 2022</p>
                                     <p className="text-gray-400 mt-4">
                                         Developed and maintained multiple web applications. Implemented responsive 
@@ -83,10 +83,10 @@ export default function About() {
                                 educationRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                             }`}
                         >
-                            <h2 className="text-4xl font-bold text-green-500">Education</h2>
+                            <h2 className="text-4xl font-bold">Education</h2>
                             <div className="grid gap-6">
-                                <div className="p-6 bg-green-500/10 rounded-lg hover:bg-green-500/20 transition-colors cursor-none">
-                                    <h3 className="text-2xl text-green-500">Computer Science</h3>
+                                <div className="p-6 bg-foreground rounded-lg">
+                                    <h3 className="text-2xl text-background">Computer Science</h3>
                                     <p className="text-gray-400">University Name • 2016 - 2020</p>
                                     <p className="text-gray-400 mt-4">
                                         Focused on software engineering and web development. Participated in various 

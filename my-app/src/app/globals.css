@@ -4,7 +4,7 @@
 
 :root {
   --background: #0a0a0a;
-  --foreground: #22e310;
+  --foreground: #22c55e;
 }
 
 :root[data-theme="light"] {
