@@ -14,13 +14,13 @@ const Nav = () => {
   };
 
   return (
-    <nav className={`transition ${isLightTheme ? 'hover:bg-green-500/10' : 'hover:bg-black/30'}`}>
+    <nav className={`transition ${isLightTheme ? 'hover:bg-teal-700/10' : 'hover:bg-black/30'}`}>
       <div className="container mx-auto">
         <div className="flex justify-end items-center p-6">
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-8  font-mono text-xl transition-colors">
             <button 
               onClick={() => scrollToSection('hero')}
-              className="group relative text-green-500 hover:text-green-400 font-mono text-xl transition-colors"
+              className="group relative "
             >
               <span className="relative z-10">home</span>
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-500 group-hover:w-full transition-all duration-300"></span>
@@ -29,7 +29,7 @@ const Nav = () => {
             
             <button 
               onClick={() => scrollToSection('about-me')}
-              className="group relative text-green-500 hover:text-green-400 font-mono text-xl transition-colors"
+              className="group relative "
             >
               <span className="relative z-10">about</span>
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-500 group-hover:w-full transition-all duration-300"></span>
@@ -38,7 +38,7 @@ const Nav = () => {
 
             <button 
               onClick={() => scrollToSection('experience')}
-              className="group relative text-green-500 hover:text-green-400 font-mono text-xl transition-colors"
+              className="group relative "
             >
               <span className="relative z-10">experience</span>
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-500 group-hover:w-full transition-all duration-300"></span>
@@ -47,7 +47,7 @@ const Nav = () => {
 
             <button 
               onClick={() => scrollToSection('education')}
-              className="group relative text-green-500 hover:text-green-400 font-mono text-xl transition-colors"
+              className="group relative "
             >
               <span className="relative z-10">education</span>
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-500 group-hover:w-full transition-all duration-300"></span>
@@ -56,7 +56,7 @@ const Nav = () => {
 
             <button 
               onClick={() => scrollToSection('skills')}
-              className="group relative text-green-500 hover:text-green-400 font-mono text-xl transition-colors"
+              className="group relative "
             >
               <span className="relative z-10">skills</span>
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-500 group-hover:w-full transition-all duration-300"></span>

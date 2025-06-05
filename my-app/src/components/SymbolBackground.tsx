@@ -84,12 +84,12 @@ export default function SymbolBackground() {
           return (
             <div
               key={index}
-              className="absolute text-green-500/30 transition-opacity duration-200 text-lg"
+              className="absolute text-foreground transition-opacity duration-200 text-lg"
               style={{
                 left: `${symbol.x}px`,
                 top: `${symbol.y}px`,
-                opacity: opacity,
-                transform: 'translate(-50%, -50%)'
+                opacity: opacity * 0.3, // 30% opacity
+                
               }}
             >
               {symbol.char}

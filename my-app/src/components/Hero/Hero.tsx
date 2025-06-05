@@ -11,7 +11,7 @@ export default function Hero() {
                 href="https://github.com/Senpai-paj"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-2 rounded-lg border border-green-500 hover:bg-green-500 hover:text-black transition"
+                className="px-6 py-2 rounded-lg border border-foreground hover:bg-foreground hover:text-background transition"
               >
                 GitHub
               </a>
@@ -19,7 +19,7 @@ export default function Hero() {
                 href="https://www.linkedin.com/in/victor-pirojoc/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-2 rounded-lg border border-green-500 hover:bg-green-500 hover:text-black transition"
+                className="px-6 py-2 rounded-lg border border-foreground hover:bg-foreground hover:text-background transition"
               >
                 LinkedIn
               </a>

@@ -8,8 +8,8 @@
 }
 
 :root[data-theme="light"] {
-  --background: #e1e1e1;
-  --foreground: #26c717;
+  --background: #F0FDF9;
+  --foreground: #1F2D2B;
 }
 
 @theme inline {

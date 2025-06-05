@@ -69,8 +69,8 @@ const Titles = () => {
 
   return (
     <div className="h-8 ml-1">
-      <span className="text-green-500 text-xl">{text}</span>
-      <span className="inline-block w-[10px] h-5 bg-green-500 animate-pulse ml-0.5"></span>
+      <span className="text-xl">{text}</span>
+      <span className="inline-block w-[10px] h-5 bg-foreground animate-pulse ml-0.5"></span>
     </div>
   );
 };
