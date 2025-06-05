@@ -84,7 +84,7 @@ export default function SymbolBackground() {
           return (
             <div
               key={index}
-              className="absolute text-green-500/20 transition-opacity duration-200 text-lg"
+              className="absolute text-green-500/30 transition-opacity duration-200 text-lg"
               style={{
                 left: `${symbol.x}px`,
                 top: `${symbol.y}px`,

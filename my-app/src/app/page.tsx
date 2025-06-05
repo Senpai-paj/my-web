@@ -6,7 +6,7 @@ import About from "@/components/About/About";
 import Nav from "@/components/Nav/Nav"
 import SideNav from "@/components/SideNav/SideNav";
 import { useState } from 'react';
-import SymbolBackground from "@/components/Hero/SymbolBackground";
+import SymbolBackground from "@/components/SymbolBackground";
 
 export default function Home() {
   const [show,setShow] = useState(false)
