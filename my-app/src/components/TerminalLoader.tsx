@@ -7,91 +7,45 @@ interface TerminalLoaderProps {
 }
 
 export default function TerminalLoader({ show }: TerminalLoaderProps) {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [text, setText] = useState('');
+  const [commandText, setCommandText] = useState('');
+  const [loadingText, setLoadingText] = useState('');
   const [dots, setDots] = useState('');
   const [isVisible, setIsVisible] = useState(true);
-  const [showOutput, setShowOutput] = useState(false);
-  const [visibleSteps, setVisibleSteps] = useState<number[]>([]);
   const [showPrompt, setShowPrompt] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const steps = [
-    {
-      prompt: '@Victors-MacBook-Air ~ % ',
-      command: 'ls',
-      output: 'Applications\t\tLibrary\t\t\tPostman Agent\nDesktop\t\t\t\tMovies\t\t\tProgramming\nDocuments\t\t\tMusic\t\t\tPublic\nDownloads\t\t\tPictures'
-    },
-    {
-      prompt: '@Victors-MacBook-Air ~ % ',
-      command: 'cd Programming/my-web/my-appp',
-      output: 'cd: no such file or directory: Programming/my-web/my-appp'
-    },
-    {
-      prompt: '@Victors-MacBook-Air ~ % ',
-      command: 'cd Programming/my-web/my-app'
-    },
-    {
-      prompt: '@Victors-MacBook-Air my-app % ',
-      command: 'clear',
-      output: null,
-      isClear: true
-    },
-    {
-      prompt: '@Victors-MacBook-Air my-app % ',
-      command: 'npm run dev'
-    }
-  ];
+  const command = 'npm run dev';
 
   useEffect(() => {
-    if (currentStep >= steps.length) {
-      setText('Loading page, welcome')
-      // Start dots animation
-      let dotCount = 0;
-      const dotsInterval = setInterval(() => {
-        setDots('.'.repeat((dotCount % 3) + 1));
-        dotCount++;
-      }, 300);
-
-      setTimeout(() => {
-        clearInterval(dotsInterval);
-        setIsVisible(false);
-        show()
-      }, 5000);
-      return;
-    }
-
     // First show the prompt
     setShowPrompt(true);
-    setText('');
+    setCommandText('');
 
     // After a delay, start typing the command
     const typingTimeout = setTimeout(() => {
-      const currentStepData = steps[currentStep];
       let currentIndex = 0;
-      const fullCommand = currentStepData.command;
 
       const interval = setInterval(() => {
-        if (currentIndex <= fullCommand.length) {
-          setText(fullCommand.slice(0, currentIndex));
+        if (currentIndex <= command.length) {
+          setCommandText(command.slice(0, currentIndex));
           currentIndex++;
         } else {
           clearInterval(interval);
-          setShowOutput(true);
+          setIsLoading(true);
+          setLoadingText('Loading page, welcome');
           
-          // Handle clear command
-          if (currentStepData.isClear) {
-            setVisibleSteps([]);
-          } else {
-            setVisibleSteps(prev => [...prev, currentStep]);
-          }
-          
-          // Move to next step after a delay
+          // Start dots animation
+          let dotCount = 0;
+          const dotsInterval = setInterval(() => {
+            setDots('.'.repeat((dotCount % 3) + 1));
+            dotCount++;
+          }, 300);
+
           setTimeout(() => {
-            setCurrentStep(prev => prev + 1);
-            setText('');
-            setShowOutput(false);
-            setShowPrompt(false);
-          }, 50);
+            clearInterval(dotsInterval);
+            setIsVisible(false);
+            show();
+          }, 3000);
         }
       }, 100);
 
@@ -99,34 +53,20 @@ export default function TerminalLoader({ show }: TerminalLoaderProps) {
     }, 500);
 
     return () => clearTimeout(typingTimeout);
-  }, [currentStep]);
+  }, [show]);
 
   if (!isVisible) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col p-2 sm:p-4">
       <div className="font-mono text-green-500 text-sm sm:text-md overflow-x-auto">
-        {steps.filter((_, index) => visibleSteps.includes(index)).map((step, index) => (
-          <div key={index}>
-            <div className="whitespace-pre-wrap sm:whitespace-pre">
-              {step.prompt}<span>{step.command}</span>
-            </div>
-            {step.output && (
-              <div className="whitespace-pre-wrap sm:whitespace-pre mt-2">
-                {step.output}
-              </div>
-            )}
-          </div>
-        ))}
-        {currentStep < steps.length && !showOutput && (
-          <div className="whitespace-pre-wrap sm:whitespace-pre">
-            {showPrompt && steps[currentStep].prompt}<span>{text}</span>
-            <span className="inline-block w-[10px] h-5 bg-green-500 animate-pulse ml-0.5"></span>
-          </div>
-        )}
-        {currentStep >= steps.length && (
-          <div className="whitespace-pre-wrap sm:whitespace-pre">
-            {text}{dots}
+        <div className="whitespace-pre-wrap sm:whitespace-pre">
+          {showPrompt && '@Victors-MacBook-Air my-app % '}<span>{commandText}</span>
+          {commandText === command && !isLoading && <span className="inline-block w-[10px] h-5 bg-green-500 animate-pulse ml-0.5"></span>}
+        </div>
+        {isLoading && (
+          <div className="whitespace-pre-wrap sm:whitespace-pre mt-2">
+            {loadingText}{dots}
           </div>
         )}
       </div>
