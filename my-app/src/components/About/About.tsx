@@ -39,6 +39,45 @@ export default function About() {
                     </div>
                 </section>
 
+                {/* Education Section */}
+                <section id="education" className="min-h-screen flex items-center justify-center snap-start">
+                    <div className="space-y-6 w-full">
+                        <AnimatedBorder />
+                        <div 
+                            ref={educationRef.ref}
+                            className={`space-y-8 transition-all duration-700 ${
+                                educationRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                            }`}
+                        >
+                            <h2 className="text-4xl font-bold text-center md:text-left">Education</h2>
+                            <div className="grid gap-6">
+                                <div className="p-6 bg-foreground rounded-lg">
+                                    <h3 className="text-2xl text-background">Master of Science in Computer Science with specialization in Internet of Things</h3>
+                                    <p className="text-background">Malmö University • 2025 - 2027</p>
+                                    <p className="text-background mt-4 text-justify">
+                                    Specialized in IoT systems, sensor integration, machine learning and cloud-based solutions. Developed practical skills through hands-on projects and prototyping.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="grid gap-6">
+                                <div className="p-6 bg-foreground rounded-lg">
+                                    <h3 className="text-2xl text-background">Bachelor of Science in Computer Science with specialization in Computer Systems
+                                    Development</h3>
+                                    <p className="text-background">Malmö University • 2022 - 2025</p>
+                                    <p className="text-background mt-4 text-justify">
+                                    Focused on modern system development and software engineering. 
+                                    Specialized in full-stack development, cloud computing, and agile methodologies. 
+                                    Developed practical skills through hands-on projects and industry collaborations. 
+                                    Participated in hackathons and coding competitions, gaining experience in rapid prototyping and team development. 
+                                    Graduated with a strong foundation in both theoretical knowledge and practical implementation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <AnimatedBorder />
+                    </div>
+                </section>
+
                 {/* Experience Section */}
                 <section id="experience" className="min-h-screen flex items-center justify-center snap-start">
                     <div className="space-y-6 w-full">
@@ -73,35 +112,7 @@ export default function About() {
                     </div>
                 </section>
                 
-                {/* Education Section */}
-                <section id="education" className="min-h-screen flex items-center justify-center snap-start">
-                    <div className="space-y-6 w-full">
-                        <AnimatedBorder />
-                        <div 
-                            ref={educationRef.ref}
-                            className={`space-y-8 transition-all duration-700 ${
-                                educationRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                            }`}
-                        >
-                            <h2 className="text-4xl font-bold text-center md:text-left">Education</h2>
-                            <div className="grid gap-6">
-                                <div className="p-6 bg-foreground rounded-lg">
-                                    <h3 className="text-2xl text-background">Bachelor of Science in Computer Science with specialization in Computer Systems
-                                    Development</h3>
-                                    <p className="text-background">Malmö University • 2022 - 2025</p>
-                                    <p className="text-background mt-4 text-justify">
-                                    Focused on modern system development and software engineering. 
-                                    Specialized in full-stack development, cloud computing, and agile methodologies. 
-                                    Developed practical skills through hands-on projects and industry collaborations. 
-                                    Participated in hackathons and coding competitions, gaining experience in rapid prototyping and team development. 
-                                    Graduated with a strong foundation in both theoretical knowledge and practical implementation.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <AnimatedBorder />
-                    </div>
-                </section>
+                
             </div>
         </div>
     );

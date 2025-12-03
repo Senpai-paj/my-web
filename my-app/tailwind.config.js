@@ -12,6 +12,7 @@ module.exports = {
         background: 'var(--background)',
       },
     },
+    
   },
   plugins: [],
 } 
