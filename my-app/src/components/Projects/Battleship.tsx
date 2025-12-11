@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Browser from '../Browser';
 import { useScrollFade } from '@/hooks/useScrollFade';
 
@@ -14,6 +15,11 @@ const projectRef = useScrollFade();
 
                         <div ref={projectRef.ref} className={`space-y-8 transition-all duration-700 ${projectRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} >
                             <h2 className="text-4xl font-bold text-center md:text-left">Projects /* Under Construction */</h2>
+                            <Link href="/" passHref>
+                                <button className="px-6 py-2 rounded-lg border border-foreground hover:bg-foreground hover:text-background transition">
+                                    Home
+                                </button>
+                            </Link>
                             <Browser url='https://battleship-demo.vercel.app/' />
                         </div>
 

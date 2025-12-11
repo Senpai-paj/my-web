@@ -3,6 +3,7 @@
 import Titles from "./Titles"
 import Nav from "../Nav/Nav";
 import { useScrollFade } from '@/hooks/useScrollFade';
+import Link from "next/link";
 
 export default function Hero() {
     const heroRef = useScrollFade();
@@ -40,6 +41,11 @@ export default function Hero() {
                                         >
                                             LinkedIn
                                         </a>
+                                        <Link href="/projects" passHref>
+                                            <button className="px-6 py-2 rounded-lg border border-foreground hover:bg-foreground hover:text-background transition">
+                                                Projects
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
