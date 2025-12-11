@@ -91,7 +91,7 @@ function hexToRgba(hex: string, alpha: number) {
       clearTimeout(fadeTimer);
       cancelAnimationFrame(animationId);
     };
-  }, []);
+  });
   
 
   return (

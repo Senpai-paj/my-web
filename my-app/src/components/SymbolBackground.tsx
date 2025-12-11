@@ -61,7 +61,7 @@ export default function SymbolBackground() {
   useEffect(() => {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [offset]);
+  }, [offset,handleMouseMove]);
 
   return (
     <div

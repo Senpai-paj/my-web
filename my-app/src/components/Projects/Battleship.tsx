@@ -1,4 +1,3 @@
-import AnimatedBorder from '../AnimatedBorder';
 import Browser from '../Browser';
 import { useScrollFade } from '@/hooks/useScrollFade';
 
