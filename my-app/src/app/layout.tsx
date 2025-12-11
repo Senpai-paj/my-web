@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Victor Pirojoc",
   description: "The best software developer you can find",
+  icons: {
+    icon: "/matrix_full.png",
+  },
 };
 
 export default function RootLayout({
